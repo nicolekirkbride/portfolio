@@ -1,4 +1,15 @@
 @import "tailwindcss";
+
+@theme {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 700px;
+  --breakpoint-lg: 950px;
+  --color-midnight: #0d0132;
+  --color-midnight-light: #17005c;
+  --color-midnight-lighter: #1a1a1a;
+  --color-midnight-lightest: #213547;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
