@@ -85,7 +85,7 @@ function SkillItems() {
                 setTimeout(() => {
                   setHoveredSkill(item.name);
                   setHoverDescription(item.description);
-                }, 200);
+                }, 300);
               } else {
                 setHoveredSkill(item.name);
                 setHoverDescription(item.description);
@@ -100,7 +100,7 @@ function SkillItems() {
           </div>
         ))}
       </div>
-      <div className="flex-col justify-end items-end bottom-0 max-w-[40vw] min-w-[40vw]">
+      <div className="flex flex-col justify-end bottom-0 max-w-[40vw] min-w-[40vw] pb-20">
         <h3
           className={`text-white text-5xl max-w-full transition-all duration-500 ease-in-out text-left pb-6
         ${
