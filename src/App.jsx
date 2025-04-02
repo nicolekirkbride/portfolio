@@ -9,10 +9,12 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <SkillItems></SkillItems>
-      <ExperienceSection></ExperienceSection>
-      {/* <WiderLearning></WiderLearning> */}
+      <div className="flex flex-col gap-30">
+        <Header></Header>
+        <SkillItems></SkillItems>
+        <ExperienceSection></ExperienceSection>
+        {/* <WiderLearning></WiderLearning> */}
+      </div>
     </>
   );
 }
