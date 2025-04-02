@@ -1,7 +1,9 @@
+import { useState } from "react";
 import React from "react";
-import checklistStar from "./../assets/Images/checklistStar.png";
 
 function ExperienceSection() {
+  const [hoveredExperience, setHoveredExperience] = useState("");
+
   const experienceList = [
     {
       title: "QA Level 4 Software Developer Apprenticeship",
@@ -37,7 +39,16 @@ function ExperienceSection() {
   return (
     <div>
       {experienceList.map((item) => (
-        <div className=" text-white bg-midnight-light pl-10 pr-10 pt-3 pb-3 rounded-4xl hover:scale-105 mb-10 transition-all duration-300 ease-in-out">
+        <div
+          className=" text-white bg-midnight-light pl-10 pr-10 pt-3 pb-3 rounded-4xl mb-10 transition-all duration-300 ease-in-out"
+          onMouseEnter={() => {
+            setHoveredExperience(item.title);
+          }}
+          onMouseLeave={() => {
+            setHoveredExperience("");
+          }}
+          key={item.title}
+        >
           <div className="flex flex-row justify-between items-end mb-5">
             <div className="flex flex-row gap-5">
               <h2 className="text-2xl font-semibold">{item.title}</h2>
@@ -49,7 +60,13 @@ function ExperienceSection() {
             </div>
           </div>
 
-          <div>
+          <div
+            className={`overflow-hidden transition-all duration-500 ease-in-out ${
+              hoveredExperience === item.title
+                ? "max-h-40 opacity-100"
+                : "max-h-0 opacity-0"
+            }`}
+          >
             <ul className=" list-inside text-md mt-2 mb-10">
               {item.description.map((point, i) => (
                 <li className="p-1" key={i}>
