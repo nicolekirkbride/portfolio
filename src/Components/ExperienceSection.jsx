@@ -10,9 +10,12 @@ function ExperienceSection() {
       company: "Hargreaves Services plc",
       duration: "1.5 yrs",
       description: [
-        "-   Developed full-stack applications using React and Node.js",
-        "-   Worked on API integration and database management",
-        "-   Collaborated with cross-functional teams to deliver projects",
+        "-   Front-end development of responsive web applications",
+        "-   Automated Software testing & software quality",
+        "-   Wire-framing, user stories & software craft",
+        "-   Agile methodologies & DevOps practices",
+        "-   CI/CD pipelines & version control",
+        "-   Database management & SQL",
       ],
     },
     {
@@ -20,9 +23,10 @@ function ExperienceSection() {
       company: "Tesla",
       duration: "6 mo",
       description: [
-        "-   Developed full-stack applications using React and Node.js",
-        "-   Worked on API integration and database management",
-        "-   Collaborated with cross-functional teams to deliver projects",
+        "-   Hands-on experience with cutting-edge technologies and tools in the energy and automotive industries.",
+        "-   Presentation of my ideas to homogenise and streamline processes between multiple disciplines.",
+        "-   Great communication and interpersonal skills that helped me raise customer satisfaction scores.",
+        "-   Lead sales meetings to discuss the progress towards KPIs.",
       ],
     },
     {
@@ -30,9 +34,11 @@ function ExperienceSection() {
       company: "Newcastle University",
       duration: "3 yrs",
       description: [
-        "-   Developed full-stack applications using React and Node.js",
-        "-   Worked on API integration and database management",
-        "-   Collaborated with cross-functional teams to deliver projects",
+        "-   Technical discipline, Python programming using libraries such as numpy, matplotlib, and pandas.",
+        "-   Strong analytical and problem solving skills from coding and interpretation of experimental data.",
+        "-   Public speaking and presentation skills, with a grade of 81 awarded for my speech at a scientific conference.",
+        "-   Final scientific research project: Modelling the distribution of gyrotactic swimmers in laminar pipeflow",
+        "-   Final group project: Interpreting data to extract the M-Sigma relation in blackholes.",
       ],
     },
   ];
@@ -40,7 +46,7 @@ function ExperienceSection() {
     <div>
       {experienceList.map((item) => (
         <div
-          className=" text-white bg-midnight-light pl-10 pr-10 pt-3 pb-3 rounded-4xl mb-10 transition-all duration-300 ease-in-out"
+          className=" text-white bg-midnight-light pl-10 pr-10 pt-3 pb-6 rounded-4xl mb-5 transition-all duration-300 ease-in-out"
           onMouseEnter={() => {
             setHoveredExperience(item.title);
           }}
@@ -55,7 +61,7 @@ function ExperienceSection() {
               <h3 className="text-xl opacity-60">{item.company}</h3>
             </div>
 
-            <div className="rounded-4xl bg-midnight mt-4 p-2 min-w-[70px] text-center">
+            <div className="rounded-4xl mt-4 p-2 min-w-[70px] text-center">
               <p className="text-lg opactity-60">{item.duration}</p>
             </div>
           </div>
