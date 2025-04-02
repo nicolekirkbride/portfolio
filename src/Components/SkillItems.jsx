@@ -26,7 +26,7 @@ function SkillItems() {
       image: cssIcon,
       colour: "cornflowerblue",
       description:
-        "Mastering flexbox was one of my first wins as a learning developer. I use css styling alone or in combination with tailwind depending on the size and scope of the project",
+        "Mastering flexbox was one of my first wins as a learning developer. I use css styling alone, or in combination with tailwind depending on the size and scope of the project",
     },
     {
       id: 3,
