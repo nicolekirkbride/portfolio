@@ -70,7 +70,7 @@ function SkillItems() {
     },
   ];
   return (
-    <div className=" flex gap-30 justify-around pl-10 w-full pt-30 pr-10">
+    <div className=" flex gap-30 justify-around pl-10 w-full pt-30 pr-10 mb-15px">
       <div className="grid lg:grid-cols-3 gap-15 md:grid-cols-2 sm:grid-cols-1 place-items-center min-w-[35vw]">
         {skillsList.map((item) => (
           <div
