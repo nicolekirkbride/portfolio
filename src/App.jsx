@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import SkillItems from "./Components/SkillItems";
 import ExperienceSection from "./Components/ExperienceSection";
+import IntroSection from "./Components/IntroSection";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,6 +12,7 @@ function App() {
     <>
       <div className="flex flex-col gap-30">
         <Header></Header>
+        <IntroSection></IntroSection>
         <SkillItems></SkillItems>
         <ExperienceSection></ExperienceSection>
         {/* <WiderLearning></WiderLearning> */}
