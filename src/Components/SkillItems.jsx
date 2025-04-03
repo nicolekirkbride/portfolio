@@ -71,9 +71,9 @@ function SkillItems() {
   ];
   return (
     <div>
-      <div className="flex flew-row gap-5 justify-center items-center text-white text-2xl text-center">
-        <h1 className="font-medium">01 </h1>
-        <h1 className="font-medium">Skills </h1>
+      <div className="flex flew-row gap-2 justify-center items-center text-white text-2xl text-center">
+        <h1 className="font-medium roboto-mono-regular">01 </h1>
+        <h1 className="font-medium roboto-mono-regular">Skills </h1>
       </div>
 
       <div className=" flex gap-30 justify-around pl-10 w-full pt-30 pr-10">

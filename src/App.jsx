@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import SkillItems from "./Components/SkillItems";
 import ExperienceSection from "./Components/ExperienceSection";
 import IntroSection from "./Components/IntroSection";
+import WiderLearning from "./Components/WiderLearning";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +16,7 @@ function App() {
         <IntroSection></IntroSection>
         <SkillItems></SkillItems>
         <ExperienceSection></ExperienceSection>
-        {/* <WiderLearning></WiderLearning> */}
+        <WiderLearning></WiderLearning>
       </div>
     </>
   );

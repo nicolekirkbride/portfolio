@@ -44,7 +44,7 @@ function ExperienceSection() {
   ];
   return (
     <div>
-      <div className="flex flew-row gap-5 justify-center items-center text-white text-2xl text-center mb-10">
+      <div className="flex flew-row gap-2 roboto-mono-regular justify-center items-center text-white text-2xl text-center mb-10">
         <h1 className="font-medium">02 </h1>
         <h1 className="font-medium">Experience </h1>
       </div>
@@ -52,7 +52,7 @@ function ExperienceSection() {
       <div>
         {experienceList.map((item) => (
           <div
-            className=" text-white bg-midnight-light pl-10 pr-10 pt-3 pb-6 rounded-4xl mb-5 transition-all duration-300 ease-in-out"
+            className=" text-white bg-midnight-light pl-10 pr-10 pt-3 pb-6 rounded-xl mb-5 transition-all duration-300 ease-in-out"
             onMouseEnter={() => {
               setHoveredExperience(item.title);
             }}
@@ -63,8 +63,8 @@ function ExperienceSection() {
           >
             <div className="flex flex-row justify-between items-end mb-5">
               <div className="flex flex-row gap-5">
-                <h2 className="text-2xl font-semibold">{item.title}</h2>
-                <h3 className="text-xl opacity-60">{item.company}</h3>
+                <h2 className="text-xl font-medium">{item.title}</h2>
+                <h3 className="text-md opacity-60">{item.company}</h3>
               </div>
 
               <div className="rounded-4xl mt-4 p-2 min-w-[70px] text-center">
