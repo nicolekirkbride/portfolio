@@ -26,7 +26,7 @@ function SkillItems() {
       image: cssIcon,
       colour: "cornflowerblue",
       description:
-        "Mastering flexbox was one of my first wins as a learning developer. I use css styling alone or in combination with tailwind depending on the size and scope of the project",
+        "Mastering flexbox was one of my first wins as a learning developer. I use css styling alone, or in combination with tailwind depending on the size and scope of the project",
     },
     {
       id: 3,
@@ -70,59 +70,70 @@ function SkillItems() {
     },
   ];
   return (
-    <div className=" flex gap-30 justify-around p-10 w-full pt-30">
-      <div className="grid grid-cols-3 gap-15 md:grid-cols-3 sm:grid-cols-1 place-items-center min-w-[35vw]">
-        {skillsList.map((item) => (
-          <div
-            key={item.id}
-            className=" w-30 h-30 justify-center items-center flex rotate-45 hover:scale-110 transition-all duration-400 ease-in-out rounded-xl"
-            style={{
-              boxShadow: `2px 2px 12px 6px ${item.colour}`,
-            }}
-            onMouseEnter={() => {
-              if (hoveredSkill !== "") {
-                setHoveredSkill("");
-                setTimeout(() => {
+    <div>
+      <div className="flex flew-row gap-2 justify-center items-center text-white text-2xl text-center">
+        <h1 className="font-medium roboto-mono-regular">01 </h1>
+        <h1 className="font-medium roboto-mono-regular">Skills </h1>
+      </div>
+
+      <div className=" flex gap-30 justify-around pl-10 w-full pt-30 pr-10">
+        <div className="grid lg:grid-cols-3 gap-15 md:grid-cols-2 sm:grid-cols-1 place-items-center min-w-[35vw]">
+          {skillsList.map((item) => (
+            <div
+              key={item.id}
+              className=" w-30 h-30 justify-center items-center flex rotate-45 hover:scale-110 transition-all duration-400 ease-in-out rounded-xl bg-midnight-light"
+              style={{
+                boxShadow: `2px 2px 12px 6px ${item.colour}`,
+              }}
+              onMouseEnter={() => {
+                if (hoveredSkill !== "") {
+                  setHoveredSkill("");
+                  setTimeout(() => {
+                    setHoveredSkill(item.name);
+                    setHoverDescription(item.description);
+                  }, 300);
+                } else {
                   setHoveredSkill(item.name);
                   setHoverDescription(item.description);
-                }, 200);
-              } else {
-                setHoveredSkill(item.name);
-                setHoverDescription(item.description);
-              }
-            }}
-            onMouseLeave={() => {
-              setHoveredSkill("");
-              setHoverDescription("");
-            }}
-          >
-            <img src={item.image} alt="icon" className="-rotate-45 w-20 h-20" />
-          </div>
-        ))}
-      </div>
-      <div className="flex-col justify-end items-end bottom-0 max-w-[40vw] min-w-[40vw]">
-        <h3
-          className={`text-white text-5xl max-w-full transition-all duration-500 ease-in-out text-left pb-6
+                }
+              }}
+              onMouseLeave={() => {
+                setHoveredSkill("");
+                setHoverDescription("");
+              }}
+            >
+              <img
+                src={item.image}
+                alt="icon"
+                className="-rotate-45 w-20 h-20"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col lg:justify-end md: justify-end sm:justify-center bottom-0 max-w-[40vw] min-w-[40vw] sm:max-w-[30vw] sm:min-w-[30vw] pb-20">
+          <h3
+            className={`text-white text-5xl max-w-full transition-all duration-500 ease-in-out text-left pb-6
         ${
           hoveredSkill
             ? "opacity-100 translate-x-0"
-            : "opacity-0 translate-x-[-50px]"
+            : "opacity-50 translate-x-[-50px]"
         }`}
-        >
-          {" "}
-          {hoveredSkill || ""}
-        </h3>
-        <h3
-          className={`text-white text-xl transition-all duration-500 ease-in-out max-w-full text-left
+          >
+            {" "}
+            {hoveredSkill || ""}
+          </h3>
+          <h3
+            className={`text-white text-xl transition-all duration-500 ease-in-out max-w-full text-left
         ${
           hoverDescription
             ? "opacity-100 translate-x-0"
-            : "opacity-0 translate-x-[-50px]"
-        }`}
-        >
-          {" "}
-          {hoverDescription || ""}
-        </h3>
+            : "opacity-50 translate-x-[-50px]"
+        } `}
+          >
+            {" "}
+            {hoverDescription ? hoverDescription : "(Hover over an icon)"}
+          </h3>
+        </div>
       </div>
     </div>
   );
