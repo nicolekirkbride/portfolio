@@ -19,6 +19,18 @@ function ExperienceSection() {
       ],
     },
     {
+      title: "Data, Digital & Technology Graduate",
+      company: "Hargreaves Services plc",
+      duration: "Alongside Apprenticeship",
+      description: [
+        "-   Power Platform developer",
+        "-   Full SDLC of PowerApps tailored to internal business requirements",
+        "-   Wire-framing, user stories & UX Processes",
+        "-   Querying relational SQL databases",
+        "-   Communication of ideas to non-technical audiences via presentation and digital forums",
+      ],
+    },
+    {
       title: "Future Talent Programme",
       company: "Tesla",
       duration: "6 mo",

@@ -5,18 +5,20 @@ import SkillItems from "./Components/SkillItems";
 import ExperienceSection from "./Components/ExperienceSection";
 import IntroSection from "./Components/IntroSection";
 import WiderLearning from "./Components/WiderLearning";
+import SnakeGame from "./Components/SnakeGame";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [pageSelection, setPageSelection] = useState("For Work");
 
   return (
     <>
       <div className="flex flex-col gap-30">
-        <Header></Header>
-        <IntroSection></IntroSection>
-        <SkillItems></SkillItems>
-        <ExperienceSection></ExperienceSection>
-        <WiderLearning></WiderLearning>
+        <Header setPageSelection={setPageSelection}></Header>
+        {pageSelection == "For Work" && <IntroSection></IntroSection>}
+        {pageSelection == "For Work" && <SkillItems></SkillItems>}
+        {pageSelection == "For Work" && <ExperienceSection></ExperienceSection>}
+        {pageSelection == "For Work" && <WiderLearning></WiderLearning>}
+        {pageSelection == "For Fun" && <SnakeGame></SnakeGame>}
       </div>
     </>
   );
